@@ -1,6 +1,6 @@
 import 'package:botiknews/components/Input.dart';
 import 'package:botiknews/components/decoration_container.dart';
-import 'package:botiknews/components/outlined_button.dart';
+import 'package:botiknews/components/button_outlined.dart';
 import 'package:botiknews/components/checkbox.dart';
 import 'package:botiknews/components/defaut_button.dart';
 import 'package:botiknews/pages/dashboard/dashboard.dart';
@@ -61,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         obscureText: true,
                         keyboardType: TextInputType.number,
                       ),
-                      OutlinedButton(
+                      ButtonOutlined(
                         label: 'Cadastrar',
                       ),
                       CheckBox(),
