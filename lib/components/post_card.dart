@@ -1,11 +1,11 @@
-import 'package:botiknews/models/news.dart';
+import 'package:botiknews/models/post.dart';
 import 'package:botiknews/utilities/convert.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class NewsCard extends StatelessWidget {
-  final News item;
-  const NewsCard({Key key, this.item});
+class PostCard extends StatelessWidget {
+  final Post item;
+  const PostCard({Key key, this.item});
   @override
   Widget build(BuildContext context) {
     Random random = new Random();
@@ -34,7 +34,7 @@ class NewsCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  item.user.name + ': ' + convertDateFromString(item.message.createdAt),
+                  item.name + ': ' + convertDateFromString(item.date),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 3,
                   style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
@@ -44,7 +44,7 @@ class NewsCard extends StatelessWidget {
                 ),
                 Container(
                   width: 240,
-                  child: Text(item.message.content,
+                  child: Text(item.contentText,
                       maxLines: 5, overflow: TextOverflow.ellipsis),
                 ),
               ],

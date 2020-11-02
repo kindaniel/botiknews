@@ -1,6 +1,6 @@
-import 'package:botiknews/components/Input.dart';
 import 'package:botiknews/components/decoration_container.dart';
 import 'package:botiknews/pages/login/bloc/user_bloc.dart';
+import 'package:botiknews/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,6 +8,9 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final UserBloc bloc = new UserBloc();
+    final TextEditingController _emailController = TextEditingController();
+    final TextEditingController _passwordController = TextEditingController();
+    final TextEditingController _nameController = TextEditingController();
     return Scaffold(
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
@@ -36,40 +39,129 @@ class SignUpScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Nome',
+                            style: kLabelStyle,
+                          ),
+                          SizedBox(height: 10.0),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            decoration: kBoxDecorationStyle,
+                            height: 60.0,
+                            child: TextField(
+                              controller: _nameController,
+                              obscureText: false,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'OpenSans',
+                              ),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(top: 14.0),
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                  color: Colors.white,
+                                ),
+                                hintText: 'Digite seu nome',
+                                hintStyle: kHintTextStyle,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       SizedBox(height: 30.0),
-                      Input(
-                        labeltext: 'E-mail',
-                        icon: Icons.email,
-                        hintText: 'Digite seu email',
-                        obscureText: false,
-                        keyboardType: TextInputType.emailAddress,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'E-mail',
+                            style: kLabelStyle,
+                          ),
+                          SizedBox(height: 10.0),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            decoration: kBoxDecorationStyle,
+                            height: 60.0,
+                            child: TextField(
+                              controller: _emailController,
+                              obscureText: false,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'OpenSans',
+                              ),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(top: 14.0),
+                                prefixIcon: Icon(
+                                  Icons.email,
+                                  color: Colors.white,
+                                ),
+                                hintText: 'Digite seu e-mail',
+                                hintStyle: kHintTextStyle,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 30.0,
                       ),
-                      Input(
-                        labeltext: 'Senha',
-                        icon: Icons.lock,
-                        hintText: 'Digite sua senha',
-                        obscureText: true,
-                        keyboardType: TextInputType.number,
-                      ),
-                      SizedBox(
-                        height: 30.0,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Senha',
+                            style: kLabelStyle,
+                          ),
+                          SizedBox(height: 10.0),
+                          Container(
+                            alignment: Alignment.centerLeft,
+                            decoration: kBoxDecorationStyle,
+                            height: 60.0,
+                            child: TextField(
+                              controller: _passwordController,
+                              obscureText: true,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'OpenSans',
+                              ),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(top: 14.0),
+                                prefixIcon: Icon(
+                                  Icons.lock,
+                                  color: Colors.white,
+                                ),
+                                hintText: 'Digite sua senha',
+                                hintStyle: kHintTextStyle,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       Container(
                         padding: EdgeInsets.symmetric(vertical: 25.0),
                         width: double.infinity,
                         child: RaisedButton(
                           elevation: 5.0,
-                          onPressed: () => bloc.signup(context),
+                          onPressed: () => bloc.signup(
+                              context: context,
+                              name: _nameController.text,
+                              email: _emailController.text,
+                              password: _passwordController.text),
                           padding: EdgeInsets.all(15.0),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
                           color: Colors.white,
                           child: Text(
-                            'Cadastrar',
+                            'Cadastro',
                             style: TextStyle(
                               color: Color(0xFF527DAA),
                               letterSpacing: 1.5,

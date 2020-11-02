@@ -1,6 +1,6 @@
-import 'package:botiknews/database/app_database.dart';
-import 'package:botiknews/models/post.dart';
+import 'package:botiknews/pages/home.dart';
 import 'package:botiknews/pages/posts/bloc/post_bloc.dart';
+import 'package:botiknews/utilities/nav.dart';
 import 'package:flutter/material.dart';
 
 class PostForm extends StatelessWidget {
@@ -52,10 +52,9 @@ class PostForm extends StatelessWidget {
                 width: double.maxFinite,
                 child: RaisedButton(
                   child: Text('Enviar'),
-                  onPressed: () {
-                    bloc.sendPost(_postController.text).then(
-                          (id) => Navigator.pop(context),
-                        );
+                  onPressed: () async {
+                    await bloc.sendPost(_postController.text);
+                    pushReplacement(context, HomePage());
                   },
                 ),
               ),

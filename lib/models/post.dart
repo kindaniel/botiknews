@@ -3,11 +3,12 @@ class Post {
   final String name;
   final String date;
   final String contentText;
+  final int userId;
 
-  Post({this.id,this.name,this.date,this.contentText});
+  Post({this.id,this.name,this.date,this.contentText, this.userId});
 
   @override 
   String toString(){
-    return 'Post: {id: $id, userName: $name, data: $date, texto: $contentText}';
+    return 'Post: {id: $id, userName: $name, data: $date, texto: $contentText, userId: $userId}';
   }
 }

@@ -1,6 +1,7 @@
 import 'package:botiknews/pages/posts/bloc/post_bloc.dart';
 import 'package:botiknews/pages/posts/components/post_list.dart';
 import 'package:botiknews/pages/posts/components/post_form.dart';
+import 'package:botiknews/settings.dart';
 import 'package:botiknews/utilities/nav.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -8,9 +9,11 @@ import 'package:provider/provider.dart';
 class Posts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(Settings.userId);
     final PostBloc bloc = Provider.of<PostBloc>(context);
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Posts'),
       ),
       body: PostList(posts: bloc.posts),
@@ -19,7 +22,8 @@ class Posts extends StatelessWidget {
           push(
             context,
             PostForm(),
-          );
+          ); 
+          
         },
         child: Icon(Icons.add),
         backgroundColor: Colors.green,
@@ -27,3 +31,5 @@ class Posts extends StatelessWidget {
     );
   }
 }
+
+
