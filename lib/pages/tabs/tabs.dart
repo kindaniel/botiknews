@@ -1,6 +1,5 @@
 import 'package:botiknews/pages/news/news.dart';
 import 'package:botiknews/pages/posts/posts.dart';
-import 'package:botiknews/pages/teste.dart';
 import 'package:flutter/material.dart';
 
 class TabsPage extends StatelessWidget {
@@ -9,21 +8,17 @@ class TabsPage extends StatelessWidget {
     return Scaffold(
       body: TabBarView(
         children: [
-          Posts(),
+          PostsScreen(),
           NewsScreen(),
-          Teste(),
         ],
       ),
       bottomNavigationBar: new TabBar(
         tabs: [
           Tab(
-            icon: new Icon(Icons.star),
+            icon: new Icon(Icons.people),
           ),
           Tab(
-            icon: new Icon(Icons.dynamic_feed),
-          ),
-          Tab(
-            icon: new Icon(Icons.emoji_events),
+            icon: new Icon(Icons.notifications_active),
           ),
         ],
         labelColor: Theme.of(context).primaryColor,

@@ -1,6 +1,7 @@
 import 'package:botiknews/components/decoration_container.dart';
 import 'package:botiknews/components/button_outlined.dart';
 import 'package:botiknews/pages/login/bloc/user_bloc.dart';
+import 'package:botiknews/settings.dart';
 import 'package:botiknews/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                         'Login',
                         style: TextStyle(
                           color: Colors.white,
-                          fontFamily: 'OpenSans',
+                          fontFamily: Settings.fontFamily,
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                         ),
@@ -57,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                               obscureText: false,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'OpenSans',
+                                fontFamily: Settings.fontFamily,
                               ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
@@ -133,7 +134,7 @@ class LoginScreen extends StatelessWidget {
                               letterSpacing: 1.5,
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
-                              fontFamily: 'OpenSans',
+                              fontFamily: Settings.fontFamily,
                             ),
                           ),
                         ),

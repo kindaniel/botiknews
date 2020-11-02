@@ -12,7 +12,7 @@ class UserRepository {
   Future<int> save(User user) async {
     final Database db = await getDatabase();
     final Map<String, dynamic> userMap = Map();
-    userMap['email'] = user.email;
+    userMap['email'] = user.email.toUpperCase();
     userMap['name'] = user.name;
     userMap['password'] = user.password;
     final userId = await db.insert(_tableName, userMap);
@@ -25,7 +25,7 @@ class UserRepository {
     final List<Map<String, dynamic>> result = await db.query(
       _tableName, 
       where: "email = ? AND password = ?",
-      whereArgs: [email, password],
+      whereArgs: [email.toUpperCase(), password],
       limit: 1);
       for (Map<String, dynamic> row in result) {
       Settings.userId = row['id'];        

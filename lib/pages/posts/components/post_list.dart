@@ -1,6 +1,5 @@
 import 'package:botiknews/components/loader.dart';
 import 'package:botiknews/components/new_card.dart';
-import 'package:botiknews/components/post_card.dart';
 import 'package:botiknews/models/post.dart';
 import 'package:flutter/material.dart';
 

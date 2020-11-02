@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
         )
       ],
       child: DefaultTabController(
-        length: 3,
+        length: 2,
         child: TabsPage(),
       ),
     );

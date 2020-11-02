@@ -1,5 +1,5 @@
+import 'package:botiknews/components/beautiful_card.dart';
 import 'package:botiknews/components/loader.dart';
-import 'package:botiknews/components/news_card.dart';
 import 'package:botiknews/models/news.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +12,7 @@ class NewsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white10,
-      height: 600,
+      height: 650,
       child: Loader(
         object: news,
         callback: list,
@@ -24,8 +24,10 @@ class NewsList extends StatelessWidget {
     return ListView.builder(
       scrollDirection: Axis.vertical,
       itemCount: news.length,
+      primary: false,
+      padding: EdgeInsets.only(left: 25.0, right: 20.0),
       itemBuilder: (context, index) {
-        return NewsCard(item: news[index]);
+        return BeaultifulCard(item: news[index]);
       },
     );
   }

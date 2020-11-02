@@ -1,6 +1,7 @@
 import 'package:botiknews/database/app_database.dart';
 import 'package:botiknews/models/post.dart';
 import 'package:botiknews/settings.dart';
+import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 
 class PostRepository {
@@ -21,6 +22,12 @@ class PostRepository {
     postMap['content_text'] = post.contentText;
     postMap['user_id'] = post.userId;
     return db.insert(_tableName, postMap);
+  }
+
+  Future<int> delete(Post post) async {
+    final Database db = await getDatabase();
+    final result = await db.rawDelete('DELETE FROM posts WHERE content_text = ?', [post.contentText]);
+    return result;
   }
 
   Future<List<Post>> findAll() async {

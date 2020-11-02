@@ -65,7 +65,7 @@ class SignUpScreen extends StatelessWidget {
                                 border: InputBorder.none,
                                 contentPadding: EdgeInsets.only(top: 14.0),
                                 prefixIcon: Icon(
-                                  Icons.email,
+                                  Icons.person,
                                   color: Colors.white,
                                 ),
                                 hintText: 'Digite seu nome',
