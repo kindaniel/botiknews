@@ -2,9 +2,9 @@ import 'package:botiknews/models/news.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class PostCard extends StatelessWidget {
+class NewsCard extends StatelessWidget {
   final News item;
-  const PostCard({Key key, this.item});
+  const NewsCard({Key key, this.item});
   @override
   Widget build(BuildContext context) {
     Random random = new Random();

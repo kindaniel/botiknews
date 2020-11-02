@@ -2,18 +2,17 @@ import 'package:botiknews/models/news.dart';
 import 'package:botiknews/repositories/newsRepository.dart';
 import 'package:flutter/widgets.dart';
 
-class DashboardBloc extends ChangeNotifier {
+class NewsBloc extends ChangeNotifier {
   final newsRepository = new NewsRepository();
   List<News> news;
 
-  DashboardBloc(){
+  NewsBloc() {
     getAll();
   }
 
-  getAll(){
-    newsRepository.getAll().then((data){
-      this.news = data;
-      notifyListeners();
-    });
+  getAll() async {
+    final news = await newsRepository.getAll();
+    this.news = news;
+    notifyListeners();
   }
 }
