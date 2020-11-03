@@ -1,9 +1,9 @@
 import 'package:botiknews/models/post.dart';
-import 'package:botiknews/repositories/postRepository.dart';
+import 'package:botiknews/repositories/posts/implementations/postLocalRepositoryImpl.dart';
 import 'package:flutter/widgets.dart';
 
 class PostBloc extends ChangeNotifier {
-  final postRepository = new PostRepository();
+  final postRepository = new PostRepositoryImpl();
   List<Post> posts;
 
   PostBloc(){

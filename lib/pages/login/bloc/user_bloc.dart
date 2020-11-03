@@ -1,20 +1,28 @@
 import 'package:botiknews/models/user.dart';
 import 'package:botiknews/pages/home.dart';
 import 'package:botiknews/pages/login/login.dart';
-import 'package:botiknews/repositories/userRepository.dart';
+import 'package:botiknews/repositories/users/implementations/userLocalRepositoryImpl.dart';
 import 'package:botiknews/utilities/nav.dart';
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/widgets.dart';
+import 'package:email_validator/email_validator.dart';
 
 class UserBloc extends ChangeNotifier {
-  final userRepository = new UserRepository();
+  final userLocalRepository = new UserLocalRepositoryImpl();
+  //@todo - refatorar as validações para reusabilidade de código
 
   signup({context, name, email, password}) async {
-    if (email != null || password != null || name != null) {
+    if (!EmailValidator.validate(email)) {
+      return _showFlushBar(
+          title: 'Erro',
+          message: 'Informe um e-mail válido.',
+          context: context);
+    }     
+    if (email.isNotEmpty || password.isNotEmpty || name.isNotEmpty) {
       final user =
           new User(id: 0, name: name, email: email, password: password);
       try {
-        await userRepository.create(user);
+        await userLocalRepository.create(user);
         pushReplacement(context, LoginScreen());
         _showFlushBar(
             title: 'OK!',
@@ -25,20 +33,26 @@ class UserBloc extends ChangeNotifier {
         _showFlushBar(title: 'Erro', message: error, context: context);
       }
     } else {
-      _showFlushBar(title: 'Erro', message: 'Erro', context: context);
+      _showFlushBar(title: 'Erro', message: 'Informe os dados corretamente.', context: context);
     }
   }
 
   login({context, email, password}) async {
-    debugPrint(email);
+    if (!EmailValidator.validate(email)) {
+      return _showFlushBar(
+          title: 'Erro',
+          message: 'Informe um e-mail válido.',
+          context: context);
+    }
+
     if (email.isEmpty || password.isEmpty) {
       return _showFlushBar(
           title: 'Erro',
-          message: 'Informe o usuário e a senha',
+          message: 'Informe o usuário e a senha.',
           context: context);
     }
     final user =
-        await userRepository.getFirst(email: email, password: password);
+        await userLocalRepository.getFirst(email: email, password: password);
     if (user.length != 0) {
       pushReplacement(context, HomePage());
     } else {

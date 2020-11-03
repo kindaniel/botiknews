@@ -1,9 +1,9 @@
 import 'package:botiknews/models/news.dart';
-import 'package:botiknews/repositories/newsRepository.dart';
+import 'package:botiknews/repositories/news/implementations/newsRemoteRepositoryImpl.dart';
 import 'package:flutter/widgets.dart';
 
 class NewsBloc extends ChangeNotifier {
-  final newsRepository = new NewsRepository();
+  final newsRepository = new NewsRepositoryImpl();
   List<News> news;
 
   NewsBloc() {

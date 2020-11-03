@@ -1,9 +1,10 @@
 import 'package:botiknews/database/app_database.dart';
 import 'package:botiknews/models/user.dart';
+import 'package:botiknews/repositories/users/userRepository.dart';
 import 'package:botiknews/settings.dart';
 import 'package:sqflite/sqflite.dart';
 
-class UserRepository {
+class UserLocalRepositoryImpl implements UserRepository {
   static const _tableName = 'users';
   Future<int> create(User user) async {
     return await save(user);

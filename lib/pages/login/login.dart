@@ -7,11 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class LoginScreen extends StatelessWidget {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final UserBloc bloc = new UserBloc();
-    final TextEditingController _emailController = TextEditingController();
-    final TextEditingController _passwordController = TextEditingController();
     return Scaffold(
       body: AnnotatedRegion<SystemUiOverlayStyle>(
         value: SystemUiOverlayStyle.light,
@@ -94,7 +94,7 @@ class LoginScreen extends StatelessWidget {
                               obscureText: true,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'OpenSans',
+                                fontFamily: Settings.fontFamily,
                               ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,

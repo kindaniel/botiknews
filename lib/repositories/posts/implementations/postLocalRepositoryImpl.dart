@@ -1,10 +1,10 @@
 import 'package:botiknews/database/app_database.dart';
 import 'package:botiknews/models/post.dart';
+import 'package:botiknews/repositories/posts/postRepository.dart';
 import 'package:botiknews/settings.dart';
-import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 
-class PostRepository {
+class PostRepositoryImpl implements PostRepository {
   static const _tableName = 'posts';
   Future<int> sendPost(text) async {
     final oneNew = Post(
