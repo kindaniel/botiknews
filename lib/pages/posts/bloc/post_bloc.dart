@@ -16,6 +16,12 @@ class PostBloc extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<int> editPost({post, newText}) async {
+    final result = await postRepository.editPost(post, newText);
+    await getAll();
+    return result;
+  }
+
   Future<int> delete(Post item) async {
     final result = await postRepository.delete(item);
     await getAll();    

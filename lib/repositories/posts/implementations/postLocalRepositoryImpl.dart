@@ -6,6 +6,7 @@ import 'package:sqflite/sqflite.dart';
 
 class PostRepositoryImpl implements PostRepository {
   static const _tableName = 'posts';
+
   Future<int> sendPost(text) async {
     final oneNew = Post(
         id: 0,
@@ -26,11 +27,17 @@ class PostRepositoryImpl implements PostRepository {
 
   Future<int> delete(Post post) async {
     final Database db = await getDatabase();
-    final result = await db.rawDelete('DELETE FROM posts WHERE content_text = ?', [post.contentText]);
+    final result = await db.rawDelete(
+        'DELETE FROM posts WHERE content_text = ?', [post.contentText]);
     return result;
   }
 
-  void update(Post post) async {}
+  Future<int> editPost(Post post, newText) async {
+    final Database db = await getDatabase();
+    final result = await db.rawUpdate(
+        'update posts set content_text = ? where date = ?', [newText, post.date]);
+    return result;
+  }
 
   Future<List<Post>> findAll() async {
     final Database db = await getDatabase();
