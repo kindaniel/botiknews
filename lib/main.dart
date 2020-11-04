@@ -37,11 +37,11 @@ Widget _introScreen() {
   return Stack(
     children: <Widget>[
       SplashScreen(
-        seconds: 9,
+        seconds: 10,
         backgroundColor: Colors.blue[100],
         image: Image.asset('assets/images/euvsthanosrounded.png'),
         title: Text(
-          "{name: Daniel Kin, age:27, Obs:Derrotou o Thanos}",
+          "{name: 'Daniel Kin', age:'27', obs:'Derrotou o Thanos'}",
           maxLines: 5,
           overflow: TextOverflow.fade,
           style: TextStyle(fontWeight: FontWeight.bold),

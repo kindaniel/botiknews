@@ -30,6 +30,8 @@ class PostRepositoryImpl implements PostRepository {
     return result;
   }
 
+  void update(Post post) async {}
+
   Future<List<Post>> findAll() async {
     final Database db = await getDatabase();
     final List<Map<String, dynamic>> result = await db.rawQuery(
