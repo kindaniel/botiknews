@@ -54,6 +54,7 @@ class LoginScreen extends StatelessWidget {
                             decoration: kBoxDecorationStyle,
                             height: 60.0,
                             child: TextField(
+                              keyboardType: TextInputType.emailAddress,
                               controller: _emailController,
                               obscureText: false,
                               style: TextStyle(
