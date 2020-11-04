@@ -10,15 +10,14 @@ import 'package:email_validator/email_validator.dart';
 class UserBloc extends ChangeNotifier {
   final userLocalRepository = new UserLocalRepositoryImpl();
   //@todo - refatorar as validações para reusabilidade de código
-
   signup({context, name, email, password}) async {
     if (!EmailValidator.validate(email)) {
       return _showFlushBar(
           title: 'Erro',
           message: 'Informe um e-mail válido.',
           context: context);
-    }     
-    if (email.isNotEmpty || password.isNotEmpty || name.isNotEmpty) {
+    }   
+    if (email.isNotEmpty && password.isNotEmpty && name.isNotEmpty) {
       final user =
           new User(id: 0, name: name, email: email, password: password);
       try {

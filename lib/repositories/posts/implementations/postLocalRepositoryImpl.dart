@@ -6,7 +6,6 @@ import 'package:sqflite/sqflite.dart';
 
 class PostRepositoryImpl implements PostRepository {
   static const _tableName = 'posts';
-
   Future<int> sendPost(text) async {
     final oneNew = Post(
         id: 0,

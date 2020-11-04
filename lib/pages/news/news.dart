@@ -51,7 +51,7 @@ class NewsScreen extends StatelessWidget {
             height: MediaQuery.of(context).size.height - 185.0,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(75.0)),
+              borderRadius: BorderRadius.only(topRight: Radius.circular(75.0)),
             ),
             child: ListView(
               primary: false,

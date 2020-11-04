@@ -10,7 +10,7 @@ Future<Database> getDatabase() async {
         'CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, email TEXT, password TEXT)');
     db.rawInsert('INSERT INTO users(id, name, email, password) VALUES(99,"Bob", "bob@info.com", "123123")');
     db.rawInsert('INSERT INTO users(id, name, email, password) VALUES(100,"Alice", "bob@info.com", "123123")');
-    db.rawInsert('INSERT INTO posts(id, date, content_text, user_id) VALUES(99,"2020-11-02T16:10:33Z", "Olha Alice, acho que seria uma boa contratar o Daniel né?!", 99)');
-    db.rawInsert('INSERT INTO posts(id, date, content_text, user_id) VALUES(100,"2020-11-03T16:10:33Z", "Concordo Bob. Vai ser uma contratação excepcional! ", 100)');
+    db.rawInsert('INSERT INTO posts(id, date, content_text, user_id) VALUES(99,"2020-11-02T16:10:33Z", "Pessoal!! Tem um candidato aí que é excelente!! Prestem atenção. Com ele, podemos entregar coisas ainda melhores!", 99)');
+    db.rawInsert('INSERT INTO posts(id, date, content_text, user_id) VALUES(100,"2020-11-03T16:10:33Z", "Concordo Bob. Sei de quem você está falando, é sobre o Daniel Kin! É realmente um ótimo profissional. Ele é muito dedicado e esforçado, pode somar bastante no time de mobile. ", 100)');
   }, version: 1, onDowngrade: onDatabaseDowngradeDelete);
 }
