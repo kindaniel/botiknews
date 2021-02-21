@@ -4,9 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(BotikNews());
 
-class MyApp extends StatelessWidget {
+class BotikNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,11 +37,11 @@ Widget _introScreen() {
   return Stack(
     children: <Widget>[
       SplashScreen(
-        seconds: 10,
+        seconds: 5,
         backgroundColor: Colors.blue[100],
         image: Image.asset('assets/images/euvsthanosrounded.png'),
         title: Text(
-          "{name: 'Daniel Kin', age:'27', obs:'Derrotou o Thanos'}",
+          "{name: 'Daniel Kin', age:'27', obs:'Desenvolvedor Flutter'}",
           maxLines: 5,
           overflow: TextOverflow.fade,
           style: TextStyle(fontWeight: FontWeight.bold),

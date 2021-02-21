@@ -7,12 +7,11 @@ import 'package:sqflite/sqflite.dart';
 class PostRepositoryImpl implements PostRepository {
   static const _tableName = 'posts';
   Future<int> sendPost(text) async {
-    final oneNew = Post(
-        id: 0,
+    final post = Post(
         contentText: text,
         userId: Settings.userId,
         date: DateTime.now().toString());
-    return await save(oneNew);
+    return await save(post);
   }
 
   Future<int> save(Post post) async {
@@ -26,26 +25,26 @@ class PostRepositoryImpl implements PostRepository {
 
   Future<int> delete(Post post) async {
     final Database db = await getDatabase();
-    final result = await db.rawDelete(
-        'DELETE FROM posts WHERE content_text = ?', [post.contentText]);
+    final result =
+        await db.rawDelete('DELETE FROM posts WHERE id = ?', [post.id]);
     return result;
   }
 
   Future<int> editPost(Post post, newText) async {
     final Database db = await getDatabase();
     final result = await db.rawUpdate(
-        'update posts set content_text = ? where date = ?', [newText, post.date]);
+        'update posts set content_text = ? where id = ?', [newText, post.id]);
     return result;
   }
 
   Future<List<Post>> findAll() async {
     final Database db = await getDatabase();
     final List<Map<String, dynamic>> result = await db.rawQuery(
-        'SELECT * FROM posts left join users on posts.user_id = users.id order by posts.date desc');
+        'SELECT posts.id as post_id, * FROM posts left join users on posts.user_id = users.id order by posts.date desc');
     final List<Post> posts = List();
     for (Map<String, dynamic> row in result) {
       final Post post = Post(
-        id: row['id'],
+        id: row['post_id'],
         date: row['date'],
         contentText: row['content_text'],
         userId: row['user_id'],

@@ -6,7 +6,7 @@ class PostBloc extends ChangeNotifier {
   final postRepository = new PostRepositoryImpl();
   List<Post> posts;
 
-  PostBloc(){
+  PostBloc() {
     getAll();
   }
 
@@ -24,13 +24,12 @@ class PostBloc extends ChangeNotifier {
 
   Future<int> delete(Post item) async {
     final result = await postRepository.delete(item);
-    await getAll();    
+    await getAll();
     return result;
   }
 
-  Future<int> sendPost(text) async {
-    final id = await postRepository.sendPost(text);
+  Future<void> sendPost(text) async {
+    await postRepository.sendPost(text);
     await getAll();
-    return id;
   }
 }

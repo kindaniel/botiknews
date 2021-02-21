@@ -5,10 +5,11 @@ class Post {
   final String contentText;
   final int userId;
 
-  Post({this.id,this.name,this.date,this.contentText, this.userId});
+  Post({this.id, this.name, this.date, this.contentText, this.userId})
+      : assert(contentText != null);
 
-  @override 
-  String toString(){
+  @override
+  String toString() {
     return 'Post: {id: $id, userName: $name, data: $date, texto: $contentText, userId: $userId}';
   }
 }

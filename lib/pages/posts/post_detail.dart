@@ -2,7 +2,6 @@ import 'package:botiknews/models/post.dart';
 import 'package:botiknews/settings.dart';
 import 'package:botiknews/utilities/convert.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 class PostDetail extends StatelessWidget {
   final Post item;
@@ -19,7 +18,7 @@ class PostDetail extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top:16, left: 8),
+                padding: const EdgeInsets.only(top: 16, left: 8),
                 child: TextButton(
                   child: Icon(
                     Icons.arrow_back_ios,

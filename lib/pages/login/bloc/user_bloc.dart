@@ -9,14 +9,13 @@ import 'package:email_validator/email_validator.dart';
 
 class UserBloc extends ChangeNotifier {
   final userLocalRepository = new UserLocalRepositoryImpl();
-  //@todo - refatorar as validações para reusabilidade de código
   signup({context, name, email, password}) async {
     if (!EmailValidator.validate(email)) {
       return _showFlushBar(
           title: 'Erro',
           message: 'Informe um e-mail válido.',
           context: context);
-    }   
+    }
     if (email.isNotEmpty && password.isNotEmpty && name.isNotEmpty) {
       final user =
           new User(id: 0, name: name, email: email, password: password);
@@ -32,7 +31,10 @@ class UserBloc extends ChangeNotifier {
         _showFlushBar(title: 'Erro', message: error, context: context);
       }
     } else {
-      _showFlushBar(title: 'Erro', message: 'Informe os dados corretamente.', context: context);
+      _showFlushBar(
+          title: 'Erro',
+          message: 'Informe os dados corretamente.',
+          context: context);
     }
   }
 
