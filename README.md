@@ -1,3 +1,5 @@
+
+Meu perfil no linkedin: 
 [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/daniel-kin-ivatiuk/)](https://www.linkedin.com/in/daniel-kin-ivatiuk/)
 
 # BotikNews
@@ -65,5 +67,3 @@ $ cd botiknews
 # Em um celular android: Abra o arquivo version-to-test.apk
 
 # Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
-
-# OU
