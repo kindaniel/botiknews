@@ -23,11 +23,12 @@ Flutter é o kit de ferramentas de IU do Google para a construção de aplicativ
 
 ## Outras informações
 <p align="center">
-- Utilizado SQFlite para armazenamento local e Dio para recuperar dados da API;
-- Provider para injeção de dependência;
-- Gerenciamento de estado sob responsabilidade do Bloc;
-- Testes unitários e de Widget; 
-- Principios Solid;
+
+- [x] Utilizado SQFlite para armazenamento local e Dio para recuperar dados da API;
+- [x] Gerenciamento de estado sob responsabilidade do Bloc;
+- [x] Testes unitários e de Widget; 
+- [x] Principios Solid;
+
 
 ### Pré-requisitos
 
