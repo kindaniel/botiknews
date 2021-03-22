@@ -1,5 +1,5 @@
-import 'package:botiknews/components/theme.dart';
-import 'package:botiknews/pages/login/login.dart';
+import 'package:botiknews/app/components/theme.dart';
+import 'package:botiknews/app/pages/login/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
