@@ -39,6 +39,17 @@ Além disto é bom ter um editor para trabalhar/visualizar o código, como [VSCo
 ### 🎲 Rodando o APP
 
 ```bash
+
+# Você pode rodar o apk que está na raiz desse projeto
+$ cd botiknews
+
+# Em um celular android: Abra o arquivo version-to-test.apk
+
+# Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
+
+
+## OU
+
 # Clone este repositório
 $ git clone <https://github.com/kindaniel/botiknews>
 
