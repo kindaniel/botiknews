@@ -23,6 +23,7 @@ Flutter é o kit de ferramentas de IU do Google para a construção de aplicativ
 - [x] Login
 - [x] Crud de posts
 - [x] Lista de novidades 
+- [x] Autorização apenas para o dono do post poder editar/remover.
 
 
 ## Outras informações
