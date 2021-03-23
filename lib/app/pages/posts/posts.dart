@@ -11,7 +11,7 @@ class PostsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final PostBloc bloc = Provider.of<PostBloc>(context);
     return Scaffold(
-      backgroundColor: Color(0xFF99FE67),
+      backgroundColor: Settings.backgroundColor,
       body: ListView(
         children: <Widget>[
           Padding(
@@ -82,7 +82,7 @@ class PostsScreen extends StatelessWidget {
           );
         },
         child: Icon(Icons.add),
-        backgroundColor: Color(0xFF99FE67),
+        backgroundColor: Settings.backgroundColor,
       ),
     );
   }

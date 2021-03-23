@@ -68,6 +68,8 @@ flutter:
     - assets/images/bot3.png
     - assets/images/euvsthanos.jpeg
     - assets/images/euvsthanosrounded.png
+    - assets/images/logo.png
+    - assets/images/boti20.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

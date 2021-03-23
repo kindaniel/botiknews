@@ -1,8 +1,7 @@
 import 'package:botiknews/app/components/theme.dart';
-import 'package:botiknews/app/pages/login/login.dart';
+import 'package:botiknews/app/pages/login/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:splashscreen/splashscreen.dart';
 
 void main() => runApp(BotikNews());
 
@@ -29,27 +28,27 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return _introScreen();
+    return LoginPage();
   }
 }
 
-Widget _introScreen() {
+/*Widget _introScreen() {
   return Stack(
     children: <Widget>[
       SplashScreen(
-        seconds: 5,
+        seconds: 0,
         backgroundColor: Colors.blue[100],
         image: Image.asset('assets/images/euvsthanosrounded.png'),
         title: Text(
-          "{name: 'Daniel Kin', age:'27', obs:'Desenvolvedor Flutter'}",
+          "{name: 'Daniel Kin', age:'28', obs:'Desenvolvedor Flutter'}",
           maxLines: 5,
           overflow: TextOverflow.fade,
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         photoSize: 200.0,
         loaderColor: Colors.red,
-        navigateAfterSeconds: LoginScreen(),
+        navigateAfterSeconds: LoginPage(),
       ),
     ],
   );
-}
+}*/

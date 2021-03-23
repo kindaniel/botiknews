@@ -10,7 +10,7 @@ class PostForm extends StatelessWidget {
     final PostBloc bloc = new PostBloc();
     final TextEditingController _postController = TextEditingController();
     return Scaffold(
-      backgroundColor: Color(0xFF99FE67),
+      backgroundColor: Settings.backgroundColor,
       body: ListView(
         children: <Widget>[
           Padding(

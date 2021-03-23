@@ -1,6 +1,6 @@
+import 'package:botiknews/app/pages/login/login_page.dart';
 import 'package:botiknews/domain/users/models/user.dart';
 import 'package:botiknews/app/pages/home.dart';
-import 'package:botiknews/app/pages/login/login.dart';
 import 'package:botiknews/domain/users/repositories/implementations/userLocalRepositoryImpl.dart';
 import 'package:botiknews/utilities/nav.dart';
 import 'package:flushbar/flushbar.dart';
@@ -21,7 +21,7 @@ class UserBloc extends ChangeNotifier {
           new User(id: 0, name: name, email: email, password: password);
       try {
         await userLocalRepository.create(user);
-        pushReplacement(context, LoginScreen());
+        pushReplacement(context, LoginPage());
         _showFlushBar(
             title: 'OK!',
             message:
@@ -43,13 +43,6 @@ class UserBloc extends ChangeNotifier {
       return _showFlushBar(
           title: 'Erro',
           message: 'Informe um e-mail válido.',
-          context: context);
-    }
-
-    if (email.isEmpty || password.isEmpty) {
-      return _showFlushBar(
-          title: 'Erro',
-          message: 'Informe o usuário e a senha.',
           context: context);
     }
     final user =

@@ -14,7 +14,7 @@ class PostEdit extends StatelessWidget {
     final TextEditingController _postController =
         TextEditingController(text: item.contentText);
     return Scaffold(
-      backgroundColor: Color(0xFF21BFBD),
+      backgroundColor: Settings.backgroundColor,
       body: ListView(
         children: <Widget>[
           Padding(

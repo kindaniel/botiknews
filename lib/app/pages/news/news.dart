@@ -38,7 +38,7 @@ class NewsScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 25.0)),
                 SizedBox(width: 10.0),
-                Text('Boticário',
+                Text('Boticário - API',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         color: Colors.white,
