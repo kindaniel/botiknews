@@ -59,7 +59,7 @@ class UserBloc extends ChangeNotifier {
     } else {
       _showFlushBar(
           title: 'Erro',
-          message: 'Usuário não encontrado. Você fez o cadastro?',
+          message: 'Usuário ou senha incorretos.',
           context: context);
     }
   }

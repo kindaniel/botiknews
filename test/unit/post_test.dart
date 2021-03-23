@@ -20,7 +20,7 @@ void main() {
 
   test('Should return the post date when create a Post', () {
     final post = Post(
-        id: 101, contentText: "conteúdo teste", userId: 1, date: '2021-02-21');
-    expect(post.date, '2021-02-21');
+        id: 101, contentText: "conteúdo teste", userId: 1, date: '2021-03-22');
+    expect(post.date, '2021-03-22');
   });
 }
