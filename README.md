@@ -19,6 +19,7 @@ Flutter é o kit de ferramentas de IU do Google para a construção de aplicativ
 
 ### Features
 
+- [x] Testes de integração, unitários e de widgets
 - [x] Cadastro
 - [x] Login
 - [x] Crud de posts
@@ -31,7 +32,6 @@ Flutter é o kit de ferramentas de IU do Google para a construção de aplicativ
 
 - [x] Utilizado SQFlite para armazenamento local e Dio para recuperar dados da API;
 - [x] Gerenciamento de estado sob responsabilidade do Bloc;
-- [x] Testes unitários e de Widget; 
 - [x] Principios Solid;
 
 
@@ -41,6 +41,25 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Flutter](https://flutter.dev). 
 Além disto é bom ter um editor para trabalhar/visualizar o código, como [VSCode](https://code.visualstudio.com/)
 
+### 🎲 Rodando teste de integração
+
+```bash 
+
+# Clone este repositório
+$ git clone <https://github.com/kindaniel/botiknews>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd botiknews
+
+# acesse a pasta de testes
+$ cd test
+
+# execute o script criado que já faz o run do teste
+$ ./execute_integration.sh
+
+# se preferir, também pode rodar o comando: flutter drive --driver=test/test_driver/integration_test_driver.dart --target=test/integration/app_test.dart, porém o script ja deixa isso pronto!
+
+```
 ### 🎲 Rodando o APP
 
 ```bash
@@ -68,3 +87,5 @@ $ cd botiknews
 # Em um celular android: Abra o arquivo version-to-test.apk
 
 # Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
+
+```

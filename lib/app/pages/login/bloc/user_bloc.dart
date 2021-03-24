@@ -16,25 +16,16 @@ class UserBloc extends ChangeNotifier {
           message: 'Informe um e-mail válido.',
           context: context);
     }
-    if (email.isNotEmpty && password.isNotEmpty && name.isNotEmpty) {
-      final user =
-          new User(id: 0, name: name, email: email, password: password);
-      try {
-        await userLocalRepository.create(user);
-        pushReplacement(context, LoginPage());
-        _showFlushBar(
-            title: 'OK!',
-            message:
-                'Usuário cadastrado com sucesso. Faça login para continuar.',
-            context: context);
-      } catch (error) {
-        _showFlushBar(title: 'Erro', message: error, context: context);
-      }
-    } else {
+    final user = new User(id: 0, name: name, email: email, password: password);
+    try {
+      await userLocalRepository.create(user);
+      pushReplacement(context, LoginPage());
       _showFlushBar(
-          title: 'Erro',
-          message: 'Informe os dados corretamente.',
+          title: 'OK!',
+          message: 'Usuário cadastrado com sucesso. Faça login para continuar.',
           context: context);
+    } catch (error) {
+      _showFlushBar(title: 'Erro', message: error, context: context);
     }
   }
 

@@ -41,6 +41,7 @@ class _LoginState extends State<LoginPage> {
                     left: 15.0, right: 15.0, top: 0, bottom: 0),
                 //padding: EdgeInsets.symmetric(horizontal: 15,),
                 child: TextFormField(
+                  key: Key("email"),
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email',
@@ -61,6 +62,7 @@ class _LoginState extends State<LoginPage> {
                     left: 15.0, right: 15.0, top: 15, bottom: 0),
                 //padding: EdgeInsets.symmetric(horizontal: 15),
                 child: TextFormField(
+                  key: Key("password"),
                   obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -87,6 +89,7 @@ class _LoginState extends State<LoginPage> {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(20)),
                 child: FlatButton(
+                  key: Key("loginButton"),
                   onPressed: () {
                     if (_formKey.currentState.validate()) {
                       _formKey.currentState.save();

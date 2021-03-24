@@ -56,6 +56,7 @@ class PostForm extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(24.0),
                   child: TextField(
+                    key: Key("postTextField"),
                     controller: _postController,
                     decoration: InputDecoration(
                       fillColor: Colors.grey[100],
@@ -87,6 +88,7 @@ class PostForm extends StatelessWidget {
                   child: SizedBox(
                     width: double.maxFinite,
                     child: RaisedButton(
+                      key: Key("postFormButton"),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0),
                       ),
