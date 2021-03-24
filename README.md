@@ -19,20 +19,20 @@ Flutter é o kit de ferramentas de IU do Google para a construção de aplicativ
 
 ### Features
 
-- [x] Testes de integração, unitários e de widgets
-- [x] Cadastro
-- [x] Login
-- [x] Crud de posts
-- [x] Lista de novidades 
-- [x] Autorização apenas para o dono do post poder editar/remover.
+- [x] Testes de integração, unitários e de widgets;
+- [x] Cadastro;
+- [x] Login;
+- [x] Crud de posts;
+- [x] Lista de novidades vindo da API;
+- [x] Autorização apenas para o dono do post poder editar/remover;
 
 
 ## Outras informações
 <p align="center">
 
 - [x] Utilizado SQFlite para armazenamento local e Dio para recuperar dados da API;
-- [x] Gerenciamento de estado sob responsabilidade do Bloc;
-- [x] Principios Solid;
+- [x] Gerenciamento de estado sob responsabilidade do Bloc utilizando o package Provider com ChangeNotifier;
+- [x] Utilizado principios de Clean architecture;
 
 
 ### Pré-requisitos
