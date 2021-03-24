@@ -51,13 +51,17 @@ $ git clone <https://github.com/kindaniel/botiknews>
 # Acesse a pasta do projeto no terminal/cmd
 $ cd botiknews
 
+# Instale as dependências
+$ flutter pub get
+
 # acesse a pasta de testes
 $ cd test
 
 # execute o script criado que já faz o run do teste
 $ ./execute_integration.sh
 
-# se preferir, também pode rodar o comando: flutter drive --driver=test/test_driver/integration_test_driver.dart --target=test/integration/app_test.dart, porém o script ja deixa isso pronto!
+# se preferir, também pode rodar o comando: flutter drive --driver=test/test_driver/integration_test_driver.dart --target=test/integration/app_test.dart
+# porém o script ja deixa isso pronto!
 
 ```
 ### 🎲 Rodando o APP
