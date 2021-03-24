@@ -71,6 +71,15 @@ $ ./execute_integration.sh
 
 ```bash
 
+# Você pode rodar o apk que está na raiz desse projeto
+$ cd botiknews
+
+# Em um celular android: Abra o arquivo version-to-test.apk
+
+# Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
+
+## OU
+
 # Clone este repositório
 $ git clone <https://github.com/kindaniel/botiknews>
 
@@ -85,14 +94,5 @@ $ flutter run
 
 # Você pode rodar o app diretamente no seu celular caso ele seja um Android. 
 # Mas também pode usar um emulador para isso.
-
-# OU
-
-# Você pode rodar o apk que está na raiz desse projeto
-$ cd botiknews
-
-# Em um celular android: Abra o arquivo version-to-test.apk
-
-# Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
 
 ```
