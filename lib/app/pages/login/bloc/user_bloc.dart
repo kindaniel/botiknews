@@ -21,7 +21,7 @@ class UserBloc extends ChangeNotifier {
       await userLocalRepository.create(user);
       pushReplacement(context, LoginPage());
       _showFlushBar(
-          title: 'OK!',
+          title: 'Ok',
           message: 'Usuário cadastrado com sucesso. Faça login para continuar.',
           context: context);
     } catch (error) {

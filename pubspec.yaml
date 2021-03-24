@@ -33,6 +33,7 @@ dependencies:
   date_format: ^1.0.9
   email_validator: '^1.0.5'
   splashscreen: ^1.2.0
+  webview_flutter: ^1.0.7
 
 
   # The following adds the Cupertino Icons font to your application.

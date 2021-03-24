@@ -91,7 +91,7 @@ $ flutter run
 # Você pode rodar o apk que está na raiz desse projeto
 $ cd botiknews
 
-# Em um celular android: Abra o arquivo version-to-test.apk
+# Em um celular android: Abra o arquivo app-release.apk
 
 # Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
 

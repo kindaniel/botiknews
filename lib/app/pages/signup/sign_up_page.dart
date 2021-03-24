@@ -1,5 +1,4 @@
 import 'package:botiknews/app/pages/login/bloc/user_bloc.dart';
-import 'package:botiknews/utilities/nav.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
