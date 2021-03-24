@@ -19,20 +19,20 @@ Flutter é o kit de ferramentas de IU do Google para a construção de aplicativ
 
 ### Features
 
-- [x] Testes de integração, unitários e de widgets
-- [x] Cadastro
-- [x] Login
-- [x] Crud de posts
-- [x] Lista de novidades 
-- [x] Autorização apenas para o dono do post poder editar/remover.
+- [x] Testes de integração, unitários e de widgets;
+- [x] Cadastro;
+- [x] Login;
+- [x] Crud de posts;
+- [x] Lista de novidades vindo da API;
+- [x] Autorização apenas para o dono do post poder editar/remover;
 
 
 ## Outras informações
 <p align="center">
 
 - [x] Utilizado SQFlite para armazenamento local e Dio para recuperar dados da API;
-- [x] Gerenciamento de estado sob responsabilidade do Bloc;
-- [x] Principios Solid;
+- [x] Gerenciamento de estado sob responsabilidade do Bloc utilizando o package Provider com ChangeNotifier;
+- [x] Utilizado principios de Clean architecture;
 
 
 ### Pré-requisitos
@@ -71,6 +71,15 @@ $ ./execute_integration.sh
 
 ```bash
 
+# Você pode rodar o apk que está na raiz desse projeto
+$ cd botiknews
+
+# Em um celular android: Abra o arquivo version-to-test.apk
+
+# Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
+
+## OU
+
 # Clone este repositório
 $ git clone <https://github.com/kindaniel/botiknews>
 
@@ -85,14 +94,5 @@ $ flutter run
 
 # Você pode rodar o app diretamente no seu celular caso ele seja um Android. 
 # Mas também pode usar um emulador para isso.
-
-# OU
-
-# Você pode rodar o apk que está na raiz desse projeto
-$ cd botiknews
-
-# Em um celular android: Abra o arquivo app-release.apk
-
-# Caso seja necessário, você deverá dar permissões para instalar aplicativos de fontes desconhecidas. 
 
 ```
