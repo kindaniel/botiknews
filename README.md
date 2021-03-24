@@ -54,6 +54,9 @@ $ cd botiknews
 # Instale as dependências
 $ flutter pub get
 
+# configure o usuário e senha do app em test/integration/app_test.dart
+$ cd test
+
 # acesse a pasta de testes
 $ cd test
 
