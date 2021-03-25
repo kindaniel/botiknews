@@ -5,9 +5,8 @@ Meu perfil no linkedin:
 # BotikNews
 
 ## Descrição do Projeto
-<p align="center">Nesse app, o colaborador poderá ver as postagens de seus colegas na página
-inicial, em ordem cronológica.
-O colaborador também poderá visualizar também as ultimas novidades.</p>
+<p align="center">Nesse app, o colaborador pode criar posts e também poderá ver as postagens de seus colegas na página
+inicial, em ordem cronológica. O colaborador também tem acesso as ultimas novidades da API.</p>
 
 
 <h1 align="center">
